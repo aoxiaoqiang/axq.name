@@ -1,0 +1,20 @@
+{
+  "name": "axq.name",
+  "version": "1.0.0",
+  "description": "test site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'run test'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aoxiaoqiang/axqName.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aoxiaoqiang/axqName/issues"
+  },
+  "homepage": "https://github.com/aoxiaoqiang/axqName#readme"
+}
