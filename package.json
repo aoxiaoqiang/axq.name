@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/aoxiaoqiang/axqName/issues"
   },
-  "homepage": "https://github.com/aoxiaoqiang/axqName#readme"
+  "homepage": "https://github.com/aoxiaoqiang/axqName#readme",
+  "dependencies": {
+    "animate.css": "^3.6.1"
+  }
 }

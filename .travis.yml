@@ -4,7 +4,7 @@ node_js:
 addons:
   ssh_known_hosts: 104.225.237.153
 after_success:
-- ssh -o StrictHostKeyChecking=no root@104.225.237.153 -p 29993
+- ssh -o StrictHostKeyChecking=no root@104.225.237.153 -p 29993 'cd /home && git pull && npm install && cp node_modules/animate.css www/animate.css && cp index.html www/index.html'
 before_install:
 - openssl aes-256-cbc -K $encrypted_805af2ab1c77_key -iv $encrypted_805af2ab1c77_iv
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
