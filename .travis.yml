@@ -1,7 +1,12 @@
 language: node_js
 node_js:
- - '6.12.0'
+- 6.12.0
 addons:
- ssh_known_hosts: 104.225.237.153
+  ssh_known_hosts: 104.225.237.153
 after_success:
- - ssh -o StrictHostKeyChecking=no root@104.225.237.153 -p 29993
+- ssh -o StrictHostKeyChecking=no root@104.225.237.153 -p 29993
+before_install:
+- openssl aes-256-cbc -K $encrypted_805af2ab1c77_key -iv $encrypted_805af2ab1c77_iv
+  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+- echo -e "Host 104.225.237.153\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
