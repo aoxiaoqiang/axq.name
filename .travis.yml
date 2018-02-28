@@ -4,7 +4,7 @@ node_js:
 addons:
   ssh_known_hosts: 104.225.237.153
 after_success:
-- ssh -o StrictHostKeyChecking=no root@104.225.237.153 -p 29993 'cd /home/axq.name && git pull && npm i && npm run build && cd /home && cp axq.name/dist www'
+- ssh -o StrictHostKeyChecking=no root@104.225.237.153 -p 29993 'cd /home/axq.name && git pull && npm i && npm run build && cd /home && cp -r axq.name/dist/* www'
 before_install:
 - openssl aes-256-cbc -K $encrypted_805af2ab1c77_key -iv $encrypted_805af2ab1c77_iv
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
